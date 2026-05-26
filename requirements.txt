@@ -7,7 +7,4 @@ datasets
 python-dotenv
 prometheus_client
 langchain_huggingface
-fastapi
-uvicorn
-jinja2
-python-multipart
+flask
