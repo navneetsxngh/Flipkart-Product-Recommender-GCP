@@ -1,0 +1,7 @@
+<div class="onboarding-empty-container" id="empty-state-area">
+  <img src="{{ url_for('static', path='assets/empty-state.svg') }}" class="onboarding-svg" alt="Search catalog illustration">
+  <div class="onboarding-title">Ask me about any Flipkart product!</div>
+  <div class="onboarding-subtitle">Get review highlights, pros/cons, and customer sentiment instantly using our AI recommender pipeline.</div>
+  
+  {% include 'components/suggestion_chips.html' %}
+</div>

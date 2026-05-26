@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: http:; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net https://use.fontawesome.com; font-src 'self' https://fonts.gstatic.com https://use.fontawesome.com; img-src 'self' data: https:;">
+  <meta name="description" content="Flipkart AI Shopping Assistant - Ask product questions powered by real customer review intelligence.">
+  <title>{% block title %}Flipkart AI Shopping Assistant{% endblock %}</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+
+  <link rel="stylesheet" href="{{ url_for('static', path='css/base.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', path='css/layout.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', path='css/sidebar.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', path='css/chat.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', path='css/components.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', path='css/animations.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', path='css/responsive.css') }}">
+
+  {% block extra_head %}{% endblock %}
+</head>
+<body>
+
+  {% block content %}{% endblock %}
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <script src="{{ url_for('static', path='js/toast.js') }}"></script>
+  <script src="{{ url_for('static', path='js/ui.js') }}"></script>
+  <script src="{{ url_for('static', path='js/suggestions.js') }}"></script>
+  <script src="{{ url_for('static', path='js/sidebar.js') }}"></script>
+  <script src="{{ url_for('static', path='js/chat.js') }}"></script>
+  <script src="{{ url_for('static', path='js/app.js') }}"></script>
+</body>
+</html>

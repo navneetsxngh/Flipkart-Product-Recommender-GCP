@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div id="initial-skeleton-loader" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 9999; background-color: var(--bg-light); display: flex; transition: opacity 0.5s ease;">
+  <div style="width: 280px; height: 100%; border-right: 1px solid var(--border-light); background-color: var(--bg-white); padding: 20px; display: flex; flex-direction: column; gap: 20px; box-sizing: border-box;" class="d-none d-lg-flex">
+    <div class="skeleton-loading" style="height: 40px; width: 80%;"></div>
+    <div class="skeleton-loading" style="height: 30px; width: 100%; margin-top: 10px;"></div>
+    <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 10px;">
+      <div class="skeleton-loading" style="height: 36px; width: 100%;"></div>
+      <div class="skeleton-loading" style="height: 36px; width: 100%;"></div>
+      <div class="skeleton-loading" style="height: 36px; width: 100%;"></div>
+    </div>
+    <div class="skeleton-loading" style="height: 40px; width: 100%;"></div>
+  </div>
+  <div style="flex-grow: 1; height: 100%; display: flex; flex-direction: column;">
+    <div style="height: 64px; border-bottom: 1px solid var(--border-light); background-color: var(--bg-white); padding: 0 24px; display: flex; align-items: center; justify-content: space-between;">
+      <div class="skeleton-loading" style="height: 24px; width: 200px;"></div>
+      <div class="skeleton-loading" style="height: 20px; width: 120px;"></div>
+    </div>
+    <div style="flex-grow: 1; padding: 24px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 24px;">
+      <div class="skeleton-loading" style="height: 140px; max-width: 600px; width: 100%; border-radius: var(--radius-lg);"></div>
+      <div class="skeleton-loading" style="height: 120px; max-width: 400px; width: 100%; border-radius: var(--radius-md);"></div>
+    </div>
+    <div style="padding: 16px 24px 24px 24px; display: flex; justify-content: center;">
+      <div class="skeleton-loading" style="height: 48px; max-width: 800px; width: 100%; border-radius: var(--radius-xl);"></div>
+    </div>
+  </div>
+</div>
+
+<div id="app-wrapper" class="app-container" style="opacity: 0; transition: opacity 0.5s ease;">
+  
+  <aside class="sidebar-container" id="sidebar-container" role="complementary" aria-label="Chat actions and history">
+    {% include 'components/sidebar.html' %}
+  </aside>
+
+  <div class="main-container">
+    {% include 'components/chat_section.html' %}
+  </div>
+
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+  {% include 'components/toast.html' %}
+
+</div>
+{% endblock %}

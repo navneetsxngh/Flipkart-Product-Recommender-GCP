@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2874F0"/>
+      <stop offset="100%" stop-color="#1A51B8"/>
+    </linearGradient>
+    <linearGradient id="yellowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE043"/>
+      <stop offset="100%" stop-color="#FFD814"/>
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="100" r="80" fill="#F5F7FA"/>
+  <circle cx="100" cy="100" r="60" fill="#E8F0FE" opacity="0.6"/>
+  <path d="M75,70 L125,70 L120,130 L80,130 Z" fill="url(#blueGrad)" opacity="0.95" />
+  <path d="M85,70 C85,55 115,55 115,70" fill="none" stroke="#FFD814" stroke-width="4" stroke-linecap="round"/>
+  <rect x="105" y="90" width="60" height="40" rx="8" fill="#FFF" filter="drop-shadow(0px 4px 8px rgba(0,0,0,0.08))" stroke="#E2E8F0" stroke-width="1" />
+  <path d="M120,105 L123,101 L126,105 L123,109 Z" fill="#FFD814"/>
+  <path d="M135,115 L137,112 L139,115 L137,118 Z" fill="#2874F0"/>
+  <circle cx="130" cy="110" r="2" fill="#878787"/>
+  <circle cx="140" cy="110" r="2" fill="#878787"/>
+  <circle cx="150" cy="110" r="2" fill="#878787"/>
+  <g transform="translate(45, 100) scale(0.8)">
+    <polygon points="10,1 13,7 20,8 15,13 16,20 10,16 4,20 5,13 0,8 7,7" fill="#FFD814"/>
+  </g>
+  <g transform="translate(60, 115) scale(0.6)">
+    <polygon points="10,1 13,7 20,8 15,13 16,20 10,16 4,20 5,13 0,8 7,7" fill="#FFD814"/>
+  </g>
+  <g transform="translate(70, 75)">
+    <circle cx="15" cy="15" r="10" fill="none" stroke="#FFD814" stroke-width="3"/>
+    <line x1="22" y1="22" x2="32" y2="32" stroke="#FFD814" stroke-width="3" stroke-linecap="round"/>
+  </g>
+</svg>

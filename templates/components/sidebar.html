@@ -1,0 +1,31 @@
+<div class="sidebar-inner">
+  <div class="sidebar-header">
+    <div class="brand-wrapper">
+      <img src="{{ url_for('static', path='assets/logo.svg') }}" class="brand-logo" alt="Flipkart AI Logo">
+    </div>
+    <div class="sidebar-desc">
+      Ask product questions powered by real customer reviews.
+    </div>
+  </div>
+
+  <div class="sidebar-history">
+    <div class="history-title">Active History</div>
+    <div id="sidebar-history-list">
+      <div class="history-empty">
+        No previous questions in this session.
+      </div>
+    </div>
+  </div>
+
+  <div class="sidebar-actions">
+    <button id="new-chat-btn" class="sidebar-btn sidebar-btn-primary" aria-label="Start new chat session">
+      <i class="fas fa-plus"></i> New Chat
+    </button>
+    <button id="clear-chat-btn" class="sidebar-btn sidebar-btn-secondary" aria-label="Clear chat session history">
+      <i class="fas fa-trash-alt"></i> Clear Chat
+    </button>
+    <button id="sidebar-collapse-action" class="sidebar-btn sidebar-btn-secondary" aria-label="Collapse sidebar">
+      <i class="fas fa-chevron-left"></i> Collapse Sidebar
+    </button>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="240" height="60">
+  <g transform="translate(10, 5)">
+    <polygon points="25,5 45,15 45,35 25,45 5,35 5,15" fill="none" stroke="#2874F0" stroke-width="2" opacity="0.4"/>
+    <polygon points="25,9 41,18 41,32 25,41 9,32 9,18" fill="#2874F0" opacity="0.1"/>
+    <line x1="25" y1="9" x2="25" y2="41" stroke="#2874F0" stroke-width="1.5" stroke-dasharray="2,2"/>
+    <line x1="9" y1="25" x2="41" y2="25" stroke="#2874F0" stroke-width="1.5" stroke-dasharray="2,2"/>
+    <path d="M18,20 L32,20 L30,35 L20,35 Z" fill="#FFD814"/>
+    <path d="M22,20 C22,17 28,17 28,20" fill="none" stroke="#2874F0" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="25" cy="27" r="4" fill="#2874F0"/>
+    <circle cx="25" cy="27" r="2" fill="#FFF"/>
+  </g>
+  <text x="65" y="32" font-family="'Outfit', 'Inter', sans-serif" font-size="20" font-weight="800" fill="#2874F0">Flipkart</text>
+  <text x="145" y="32" font-family="'Outfit', 'Inter', sans-serif" font-size="20" font-weight="400" fill="#FFD814">AI</text>
+  <text x="65" y="47" font-family="'Inter', sans-serif" font-size="10" font-weight="600" fill="#878787" letter-spacing="1">ASSISTANT</text>
+</svg>

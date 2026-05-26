@@ -1,0 +1,68 @@
+<header class="chat-header">
+  <div style="display: flex; align-items: center; gap: 12px;">
+    <button id="sidebar-toggle-btn" class="chat-action-btn-input" style="font-size: 16px;" aria-label="Toggle sidebar panel">
+      <i class="fas fa-bars"></i>
+    </button>
+    <button id="mobile-sidebar-toggle" class="chat-action-btn-input d-lg-none" style="font-size: 16px; display: none;" aria-label="Open sidebar menu drawer">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div style="display: flex; flex-direction: column;">
+      <h1 style="font-size: 16px; font-weight: 700; color: var(--text-dark); margin: 0; line-height: 1.2;">Flipkart AI Assistant</h1>
+      <span style="font-size: 10px; color: var(--color-positive); font-weight: 600; display: flex; align-items: center; gap: 4px;">
+        <span style="width: 6px; height: 6px; background-color: var(--color-positive); border-radius: 50%; display: inline-block;"></span> Active
+      </span>
+    </div>
+  </div>
+  <div style="display: flex; align-items: center; gap: 12px;">
+    <span style="font-size: 11px; color: var(--text-muted); font-weight: 500;" class="d-none d-sm-inline">
+      Powered by LangChain + Groq
+    </span>
+  </div>
+</header>
+
+<main class="chat-content" id="chat-content">
+  {% include 'components/welcome_banner.html' %}
+  {% include 'components/empty_state.html' %}
+
+  <div class="messages-list" id="messages-list">
+  </div>
+
+  <div id="typing-indicator-wrapper" class="message-wrapper bot-msg" style="display: none; margin-top: 10px;">
+    <div class="message-avatar">
+      <img src="/static/assets/bot-avatar.svg" alt="Bot">
+    </div>
+    <div class="message-container">
+      <div class="message-bubble">
+        <div class="typing-indicator">
+          <div class="typing-dot"></div>
+          <div class="typing-dot"></div>
+          <div class="typing-dot"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="chat-footer">
+  <form id="chat-form" class="chat-input-wrapper" action="#" method="POST">
+    <button type="button" class="chat-action-btn-input" aria-label="Use voice input" title="Voice search (Visual placeholder)">
+      <i class="fas fa-microphone"></i>
+    </button>
+    <textarea 
+      id="chat-input" 
+      class="chat-input-textarea" 
+      placeholder="Ask about cameras, sound, battery under ₹20,000..." 
+      maxlength="500" 
+      rows="1"
+      aria-label="Product question text input"
+      required
+    ></textarea>
+    <div class="chat-input-actions">
+      <span class="input-counter" id="char-counter">0 / 500</span>
+      <button type="submit" id="send-btn" class="chat-action-btn-input chat-send-btn" aria-label="Send message" disabled>
+        <i class="fas fa-paper-plane" id="send-icon"></i>
+        <span class="spinner-border spinner-border-sm text-white" id="send-spinner" style="display: none;" role="status"></span>
+      </button>
+    </div>
+  </form>
+</footer>

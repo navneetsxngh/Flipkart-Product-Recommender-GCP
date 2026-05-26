@@ -1,0 +1,13 @@
+pypdf
+langchain
+langchain_community
+langchain_groq
+langchain-astradb
+datasets
+python-dotenv
+prometheus_client
+langchain_huggingface
+fastapi
+uvicorn
+jinja2
+python-multipart

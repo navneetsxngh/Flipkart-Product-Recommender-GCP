@@ -1,0 +1,80 @@
+@media (max-width: 992px) {
+  .sidebar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    transform: translateX(-100%);
+    width: 280px;
+    z-index: 1000;
+    box-shadow: var(--shadow-premium);
+  }
+  
+  .app-container.sidebar-open .sidebar-container {
+    transform: translateX(0);
+  }
+  
+  .app-container.sidebar-collapsed .sidebar-container {
+    transform: translateX(-100%);
+    width: 280px;
+  }
+
+  .sidebar-overlay {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .chat-header {
+    padding: 0 16px;
+  }
+  
+  .chat-content {
+    padding: 16px;
+  }
+  
+  .message-container {
+    max-width: 85%;
+  }
+  
+  .chat-footer {
+    padding: 12px 16px 16px 16px;
+  }
+  
+  .chat-input-wrapper {
+    border-radius: var(--radius-lg);
+  }
+  
+  .welcome-banner {
+    padding: 20px 16px;
+  }
+  
+  .welcome-title {
+    font-size: 18px;
+  }
+  
+  .welcome-subtitle {
+    font-size: 12px;
+    max-width: 100%;
+    margin-bottom: 12px;
+  }
+  
+  .welcome-illustration {
+    display: none;
+  }
+  
+  .suggestion-chips-grid {
+    justify-content: flex-start;
+  }
+  
+  .toast-container-custom {
+    top: 12px;
+    right: 12px;
+    left: 12px;
+  }
+  
+  .toast-custom {
+    min-width: 0;
+    width: 100%;
+  }
+}
