@@ -4,7 +4,9 @@
       "Bash(C:\\\\Users\\\\singh\\\\OneDrive\\\\Desktop\\\\Flipkart Recommender\\\\Fenv\\\\Scripts\\\\pip.exe uninstall *)",
       "Bash(C:\\\\Users\\\\singh\\\\OneDrive\\\\Desktop\\\\Flipkart Recommender\\\\Fenv\\\\Scripts\\\\pip.exe show *)",
       "Bash(C:\\\\Users\\\\singh\\\\OneDrive\\\\Desktop\\\\Flipkart Recommender\\\\Fenv\\\\Scripts\\\\pip.exe install *)",
-      "Bash(Get-Content *)"
+      "Bash(Get-Content *)",
+      "Bash(Fenv\\\\Scripts\\\\python app.py)",
+      "PowerShell(try { Invoke-WebRequest -Uri \"http://localhost:5000/health\" -TimeoutSec 5 | Select-Object StatusCode, Content } catch { $_.Exception.Message })"
     ]
   }
 }

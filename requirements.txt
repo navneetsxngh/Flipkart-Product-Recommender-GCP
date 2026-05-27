@@ -3,6 +3,8 @@ langchain
 langchain_community
 langchain_groq
 langchain-astradb
+langchain_classic
+langgraph
 datasets
 python-dotenv
 prometheus_client
