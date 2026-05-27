@@ -1,5 +1,14 @@
-from langchain_astradb import AstraDBVectorStore, SetupMode
+from langchain_astradb import AstraDBVectorStore
 from langchain_huggingface import HuggingFaceEndpointEmbeddings
+
+try:
+    from langchain_astradb.utils.astradb import SetupMode
+    _SETUP_OFF = SetupMode.OFF
+    _SETUP_SYNC = SetupMode.SYNC
+except ImportError:
+    # Older versions accept the raw string values
+    _SETUP_OFF = "off"
+    _SETUP_SYNC = "sync"
 
 from flipkart.data_convertor import DataConvertor
 from flipkart.config import Configuration
@@ -11,7 +20,7 @@ class DataIngestion:
             task="feature-extraction",
         )
 
-    def _build_vectorstore(self, setup_mode: SetupMode) -> AstraDBVectorStore:
+    def _build_vectorstore(self, setup_mode) -> AstraDBVectorStore:
         return AstraDBVectorStore(
             embedding=self.embedding,
             collection_name="FLIPKART_DATABASE",
@@ -23,13 +32,12 @@ class DataIngestion:
 
     def ingest(self, load_existing=True):
         if load_existing:
-            # Connect to the existing collection without attempting to (re)create it
-            return self._build_vectorstore(SetupMode.OFF)
+            return self._build_vectorstore(_SETUP_OFF)
 
         print("Loading data from CSV")
         data = DataConvertor("data/flipkart_product_review.csv").convert()
         print("Data loaded successfully")
-        vectorstore = self._build_vectorstore(SetupMode.SYNC)
+        vectorstore = self._build_vectorstore(_SETUP_SYNC)
         vectorstore.add_documents(documents=data)
         print("Data ingested successfully")
         return vectorstore
